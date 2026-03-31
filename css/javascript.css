@@ -1,0 +1,244 @@
+
+
+.js-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.js-theory {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.event-card {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #f7df1e; 
+}
+
+.event-card h4 { color: #f7df1e; margin-bottom: 10px; }
+.event-card code { display: block; margin-top: 10px; color: #aaa; font-size: 0.85rem; }
+
+/* Пісочниця */
+.js-playground {
+    background: #252525;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+#js-counter { font-size: 4rem; color: #fff; margin-bottom: 10px; transition: transform 0.2s ease; }
+
+.playground-controls { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+
+.btn--js { background: #f7df1e; color: #000; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.btn--outline-small { border: 1px solid #555; color: #ccc; background: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+
+.js-message {
+    margin-top: 20px;
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+    transition: opacity 0.5s ease; 
+}
+
+
+
+
+@media (max-width: 992px) {
+    .js-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .js-playground { padding: 30px 15px; }
+    #js-counter { font-size: 3rem; }
+    .playground-controls { flex-direction: column; }
+    .btn--js, .btn--outline-small { width: 100%; }
+}
+
+
+.js-divider {
+    
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 100px 0 30px 0;
+}
+
+.js-tool-title {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.js-quote {
+    margin-top: 15px;
+    min-height: 40px; 
+    color: #f7df1e;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+
+@media (max-width: 480px) {
+    .js-extra-tools .playground-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+.js-marquee {
+    background: rgba(247, 223, 30, 0.05); 
+    margin-top: 40px;
+}
+
+.marquee-link.js-link:hover {
+    color: #000;
+    background-color: #f7df1e;
+    border-color: #f7df1e;
+    box-shadow: 0 8px 20px rgba(247, 223, 30, 0.3);
+}
+
+
+.js-marquee .marquee__inner {
+    animation-direction: reverse; 
+    animation-duration: 30s; 
+}
+
+
+/* Картки тезисів */
+.js-concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.concept-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid rgba(247, 223, 30, 0.2);
+    transition: all 0.3s ease;
+}
+
+.concept-card:hover {
+    background: rgba(247, 223, 30, 0.1);
+    transform: translateY(-5px);
+    border-color: #f7df1e;
+}
+
+.concept-card .icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border: 2px solid #f7df1e;
+    color: #fff;
+    text-align: left;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #888;
+}
+
+.mini-code {
+    background: #000;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: #f7df1e;
+    font-size: 0.9rem;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+
+    align-items: center;
+    justify-content: center;
+    padding: 10px; 
+}
+
+.modal-content {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 15px;
+    position: relative;
+    border: 2px solid #f7df1e;
+    color: #fff;
+
+    width: 100%; 
+    max-width: 500px; 
+
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+
+.mini-code {
+    background: #000;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+.js-concepts-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+    gap: 15px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.concept-card {
+    padding: 20px 10px;
+    text-align: center;
+
+    word-wrap: break-word; 
+    box-sizing: border-box;
+}
+
+.concept-card h4 {
+    font-size: 1rem;
+    margin: 0;
+}

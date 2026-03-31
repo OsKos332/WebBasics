@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebBasics</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <div class="logo">WebBasics</div>
+
+        <!-- Десктопне меню (якірні посилання) -->
+        <nav class="desktop-nav">
+          <ul class="nav-list">
+            <li><a href="#home">Головна</a></li>
+            <li><a href="#about">Про сайт</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#js">JS</a></li>
+          </ul>
+        </nav>
+
+        <button class="burger" id="burger-btn" aria-label="Відкрити меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Мобільне меню (якірні посилання) -->
+      <nav class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-list">
+          <li><a href="#home">Головна</a></li>
+          <li><a href="#about">Про сайт</a></li>
+          <li><a href="#html">HTML</a></li>
+          <li><a href="#css">CSS</a></li>
+          <li><a href="#js">JavaScript</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Секції для перевірки роботи якорів -->
+    <main>
+      <section id="home" class="section section--dark hero">
+        <div class="container hero__content">
+          <h1 class="hero__title">
+            Основи <span class="highlight">Web-розробки</span>
+          </h1>
+          <p class="hero__subtitle">
+            Навчальний ресурс про створення сучасних сайтів за допомогою HTML,
+            CSS та JavaScript.
+          </p>
+          <div class="hero__buttons">
+            <a href="#about" class="btn btn--primary">Розпочати навчання</a>
+            <a href="#html" class="btn btn--outline">Вивчати HTML</a>
+          </div>
+
+          <div class="hero__badge">
+            <code>&lt;dev /&gt; 2026</code>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="section section--light">
+        <div class="container">
+          <h2 class="section-title">Про проєкт</h2>
+          <p class="section-subtitle">
+            Оберіть технологію, щоб дізнатися про неї більше:
+          </p>
+
+          <div class="about-grid">
+            <a href="#html" class="about-card-link">
+              <div class="about-card">
+                <div class="card-icon">🏗️</div>
+                <h3>Структура</h3>
+                <p>
+                  Використання семантичного HTML5 для створення логічного
+                  каркаса сторінки.
+                </p>
+                <span class="card-more">Детальніше &rarr;</span>
+              </div>
+            </a>
+
+            <a href="#css" class="about-card-link">
+              <div class="about-card">
+                <div class="card-icon">🎨</div>
+                <h3>Стилізація</h3>
+                <p>
+                  Застосування сучасних технік CSS3 для оформлення інтерфейсу та
+                  адаптивності.
+                </p>
+                <span class="card-more">Детальніше &rarr;</span>
+              </div>
+            </a>
+
+            <a href="#js" class="about-card-link">
+              <div class="about-card">
+                <div class="card-icon">⚡</div>
+                <h3>Логіка</h3>
+                <p>
+                  Впровадження JavaScript для обробки подій та створення
+                  динамічної взаємодії.
+                </p>
+                <span class="card-more">Детальніше &rarr;</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="html" class="section section--dark">
+        <div class="container">
+          <div class="code-description">
+            <div class="theory-block">
+              <h2>Що таке HTML?</h2>
+              <p>
+                <strong>HTML (HyperText Markup Language)</strong> — це
+                стандартизована мова розмітки документів, яка використовується
+                для створення структури веб-сторінок. Вона не є мовою
+                програмування, а слугує "каркасом", на який згодом накладаються
+                стилі (CSS) та логіка (JS).
+              </p>
+              <hr class="section-divider" />
+              <h3>Навіщо він потрібен?</h3>
+              <ul class="theory-list">
+                <li>
+                  <strong>Структурування:</strong> Визначає заголовки, абзаци,
+                  списки та таблиці.
+                </li>
+                <li>
+                  <strong>Зв'язок:</strong> Створює гіперпосилання для переходу
+                  між сторінками.
+                </li>
+                <li>
+                  <strong>Мультимедіа:</strong> Дозволяє вбудовувати зображення,
+                  відео та аудіо.
+                </li>
+                <li>
+                  <strong>SEO:</strong> Допомагає пошуковим роботам індексувати
+                  контент.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <hr class="section-divider" />
+          <div class="code-layout">
+            <div class="code-description">
+              <div class="tag-info">
+                <span class="tag-badge">&lt;header&gt;</span>
+                <p>Верхня частина сторінки (логотип, навігація).</p>
+              </div>
+              <div class="tag-info">
+                <span class="tag-badge">&lt;main&gt;</span>
+                <p>Основний унікальний контент документа.</p>
+              </div>
+              <div class="tag-info">
+                <span class="tag-badge">&lt;footer&gt;</span>
+                <p>Нижня частина (авторське право, контакти).</p>
+              </div>
+              <div class="tag-info">
+                <span class="tag-badge">&lt;section&gt;</span>
+                <p>Логічний розділ або блок контенту.</p>
+              </div>
+            </div>
+
+            <div class="code-window">
+              <div class="code-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="file-name">index.html</span>
+              </div>
+              <pre class="code-content"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Мій сайт&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;...&lt;/header&gt;
+    &lt;main&gt;
+        &lt;h1&gt;Привіт!&lt;/h1&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="css" class="section section--light">
+        <div class="container">
+          <div class="css-theory">
+            <div class="theory-block">
+              <h2 class="css-main-title">Основи стилізації CSS3</h2>
+              <p class="css-intro-text">
+                <strong>CSS (Cascading Style Sheets)</strong> — це мова, яка
+                вдихає життя в HTML-каркас. Вона дозволяє точно керувати
+                кольорами, шрифтами, відступами та анімаціями, створюючи
+                сучасний візуальний досвід.
+              </p>
+
+              <div class="concept-grid">
+                <div class="concept-item">
+                  <span class="concept-dot"></span>
+                  <strong>Каскадність:</strong> Ієрархія правил, що визначає
+                  пріоритет стилів.
+                </div>
+                <div class="concept-item">
+                  <span class="concept-dot"></span>
+                  <strong>Селектори:</strong> Способи вибору елементів для
+                  надання їм вигляду.
+                </div>
+                <div class="concept-item">
+                  <span class="concept-dot"></span>
+                  <strong>Box Model:</strong> Система відступів (margin,
+                  padding) та меж (border).
+                </div>
+                <div class="concept-item">
+                  <span class="concept-dot"></span>
+                  <strong>Flex & Grid:</strong> Сучасні інструменти для побудови
+                  складних макетів.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="section-divider" data-content="CSS" />
+
+          <div class="css-demo-grid">
+            <!-- Блок з поясненням властивостей -->
+            <div class="css-explanation">
+              <div class="property-item">
+                <span class="prop-name">color: #00d4ff;</span>
+                <p>Змінює колір тексту елемента.</p>
+              </div>
+              <div class="property-item">
+                <span class="prop-name">background: #1e1e1e;</span>
+                <p>Встановлює колір або зображення фону.</p>
+              </div>
+              <div class="property-item">
+                <span class="prop-name">border-radius: 12px;</span>
+                <p>Закруглює кути блоку.</p>
+              </div>
+              <div class="property-item">
+                <span class="prop-name">padding: 20px;</span>
+                <p>Створює внутрішні відступи від межі до контенту.</p>
+              </div>
+            </div>
+
+            <div class="css-visual-box">
+              <div class="demo-card">
+                <div class="demo-card__header">Попередній перегляд</div>
+                <div class="demo-card__body">
+                  <div class="preview-element">
+                    <span>Box Model</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="code-window mini">
+                <pre><code>.box {
+  background: #00d4ff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px;
+}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee-container">
+            <div class="marquee-title">Популярні інструменти:</div>
+
+            <div class="marquee">
+              <div class="marquee__inner">
+                <a
+                  href="https://getbootstrap.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Bootstrap</a
+                >
+                <a
+                  href="https://tailwindcss.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Tailwind CSS</a
+                >
+                <a
+                  href="https://sass-lang.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Sass / SCSS</a
+                >
+                <a
+                  href="https://postcss.org"
+                  target="_blank"
+                  class="marquee-link"
+                  >PostCSS</a
+                >
+                <a href="https://bulma.io" target="_blank" class="marquee-link"
+                  >Bulma</a
+                >
+                <a
+                  href="https://styled-components.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Styled Components</a
+                >
+
+                <a
+                  href="https://getbootstrap.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Bootstrap</a
+                >
+                <a
+                  href="https://tailwindcss.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Tailwind CSS</a
+                >
+                <a
+                  href="https://sass-lang.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Sass / SCSS</a
+                >
+                <a
+                  href="https://postcss.org"
+                  target="_blank"
+                  class="marquee-link"
+                  >PostCSS</a
+                >
+                <a href="https://bulma.io" target="_blank" class="marquee-link"
+                  >Bulma</a
+                >
+                <a
+                  href="https://styled-components.com"
+                  target="_blank"
+                  class="marquee-link"
+                  >Styled Components</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="js" class="section section--dark">
+        <div class="container">
+          <div class="theory-block">
+            <h2 class="section-title text-white">Основи JavaScript</h2>
+
+            <div class="js-concepts-grid">
+              <div class="concept-card" onclick="openModal('vars')">
+                <span class="icon">📦</span>
+                <h4>Змінні та Типи</h4>
+              </div>
+              <div class="concept-card" onclick="openModal('funcs')">
+                <span class="icon">⚙️</span>
+                <h4>Функції</h4>
+              </div>
+              <div class="concept-card" onclick="openModal('dom')">
+                <span class="icon">🌳</span>
+                <h4>DOM-дерево</h4>
+              </div>
+              <div class="concept-card" onclick="openModal('events')">
+                <span class="icon">🖱️</span>
+                <h4>Події</h4>
+              </div>
+            </div>
+          </div>
+
+          <div id="js-modal" class="modal">
+            <div class="modal-content">
+              <span class="close-modal" onclick="closeModal()">&times;</span>
+              <h3 id="modal-title">Назва тезису</h3>
+              <p id="modal-text">Детальний опис...</p>
+              <pre
+                class="mini-code"
+              ><code id="modal-code">console.log('JS');</code></pre>
+            </div>
+          </div>
+
+          <div class="js-grid">
+            <div class="js-theory">
+              <div class="event-card">
+                <h4>Події (Events)</h4>
+                <p>
+                  JS відстежує дії користувача: кліки, рух миші, введення
+                  тексту.
+                </p>
+                <code>element.addEventListener('click', ...)</code>
+              </div>
+              <div class="event-card">
+                <h4>DOM-маніпуляції</h4>
+                <p>Зміна вмісту, стилів та структури HTML в реальному часі.</p>
+                <code>document.querySelector('.box').style...</code>
+              </div>
+            </div>
+
+            <div class="js-playground">
+              <div class="playground-box">
+                <h3 id="js-counter">0</h3>
+                <p>Кліків здійснено</p>
+                <div class="playground-controls">
+                  <button id="increment-btn" class="btn btn--js">
+                    Додати +1
+                  </button>
+                  <button id="reset-btn" class="btn btn--outline-small">
+                    Скинути
+                  </button>
+                </div>
+              </div>
+              <div class="js-message" id="js-message">Натисніть кнопку!</div>
+            </div>
+          </div>
+          <div class="js-extra-tools">
+            <hr class="js-divider" />
+            <p class="js-tool-title">Генератор випадкового фону:</p>
+            <div class="playground-controls">
+              <button id="bg-gen-btn" class="btn btn--js">
+                Змінити фон секції
+              </button>
+              <button id="bg-def-btn" class="btn btn--js">Скинути фон</button>
+              <button id="quote-btn" class="btn btn--outline-small">
+                Порада дня
+              </button>
+            </div>
+            <p id="quote-display" class="js-quote"></p>
+
+            <div class="marquee-container js-marquee">
+              <div class="marquee-title">Популярні JS-фреймворки:</div>
+
+              <div class="marquee">
+                <div class="marquee__inner">
+                  <a
+                    href="https://react.dev"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >React.js</a
+                  >
+                  <a
+                    href="https://vuejs.org"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Vue.js</a
+                  >
+                  <a
+                    href="https://angular.io"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Angular</a
+                  >
+                  <a
+                    href="https://svelte.dev"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Svelte</a
+                  >
+                  <a
+                    href="https://nextjs.org"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Next.js</a
+                  >
+                  <a
+                    href="https://nodejs.org"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Node.js</a
+                  >
+
+                  <a
+                    href="https://react.dev"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >React.js</a
+                  >
+                  <a
+                    href="https://vuejs.org"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Vue.js</a
+                  >
+                  <a
+                    href="https://angular.io"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Angular</a
+                  >
+                  <a
+                    href="https://svelte.dev"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Svelte</a
+                  >
+                  <a
+                    href="https://nextjs.org"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Next.js</a
+                  >
+                  <a
+                    href="https://nodejs.org"
+                    target="_blank"
+                    class="marquee-link js-link"
+                    >Node.js</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button id="back-to-top" class="back-to-top" aria-label="Вгору">
+      <span class="arrow">↑</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
